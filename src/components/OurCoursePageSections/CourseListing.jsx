@@ -1,43 +1,57 @@
-// src/components/OurCoursePageSections/CourseListing.jsx
-
 import React from 'react';
-import CourseCard from './CourseCard.jsx';
-// Import your CSS file for styling the grid layout
+import CourseCard from './CourseCard';
+import image from '../../assests/card4.png';
 
 const courses = [
   {
-    image: '/path/to/course-image1.png',
-    title: '50 Days of Ethical Hacking From Beginner to Pro in 2024',
-    description: 'Master ethical hacking, from beginner to advanced professional...',
-    price: '$ 1,999'
+    image: image,
+    title: '90 Days of Course: From Figma to DevSkill Complete Tutorials',
+    instructor: 'Dr. Harsh Agrawal, Dev Lead Instructor',
+    rating: 4.5,
+    reviews: '1,12,525',
+    isBestseller: true,
+    price: '1,999'
   },
   {
-    image: '/path/to/course-image2.png',
-    title: '50 Hours of Excel: From Zero to Pro in Excel Full Course in 2024',
-    description: 'Become a certified Excel expert with this complete 50-hour course...',
-    price: '$ 1,999'
+    image: image,
+    title: '90 Days of Course: From Figma to DevSkill Complete Tutorials',
+    instructor: 'Dr. Harsh Agrawal, Dev Lead Instructor',
+    rating: 4.5,
+    reviews: '1,12,525',
+    isBestseller: true,
+    price: '1,999'
   },
   {
-    image: '/path/to/course-image3.png',
-    title: '20 Hours of DevOps From Beginner to Expert in DevOps Engineering Course',
-    description: 'Get hands-on experience in DevOps and learn to automate your workflows...',
-    price: '$ 1,999'
+    image: image,
+    title: '90 Days of Course: From Figma to DevSkill Complete Tutorials',
+    instructor: 'Dr. Harsh Agrawal, Dev Lead Instructor',
+    rating: 4.5,
+    reviews: '1,12,525',
+    isBestseller: true,
+    price: '1,999'
   }
 ];
 
 const CourseListing = () => {
   return (
-    <section className="course-listing">
-      <div className="course-card-grid">
-        {courses.map((course, index) => (
-          <CourseCard
-            key={index}
-            image={course.image}
-            title={course.title}
-            description={course.description}
-            price={course.price}
-          />
-        ))}
+    <section 
+      className="bg-gradient-to-r from-[#B3A9FF] to-[#FFCCFB] p-8 min-h-screen"
+    >
+      <div className="container mx-auto">
+        <div className="flex justify-center items-center flex-wrap gap-6 md:gap-8 lg:gap-10">
+          {courses.map((course, index) => (
+            <CourseCard
+              key={index}
+              image={course.image}
+              title={course.title}
+              instructor={course.instructor}
+              rating={course.rating}
+              reviews={course.reviews}
+              isBestseller={course.isBestseller}
+              price={course.price}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
