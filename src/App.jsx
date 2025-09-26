@@ -4,7 +4,7 @@ import HomePage from './pages/HomePage'
 import AdmissionFeePage from './pages/AdmissionFeePage'
 import OurAcademicsPage from './pages/OurAcademicsPage'
 import OurCoursePage from './pages/OurCourse'
-// import ContactPage from './pages/ContactPage'
+import ContactPage from './pages/ContactPage'
 
 function App() {
   return (
@@ -15,8 +15,7 @@ function App() {
           <Route path="/admission" element={<AdmissionFeePage />} />
           <Route path="/academics" element={<OurAcademicsPage />} /> 
           <Route path="/courses" element={<OurCoursePage />} />
-          {/* <Route path="/contact" element={<ContactPage />} /> */}
-          {/* Add more routes as needed */}
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </div>
     </Router>

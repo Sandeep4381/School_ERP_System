@@ -59,22 +59,20 @@ function Header() {
                 </Link>
               </li>
               <li className="mx-6">
-                {/* For anchor links (e.g., to a section on the same page), <a> is fine */}
-                <a
-                  href="/courses"
+                <Link
+                  to="/courses"
                   className="text-gray-900 font-bold text-base hover:text-[#a51834] transition duration-300"
                 >
                   Our Courses
-                </a>
+                </Link>
               </li>
               <li className="mx-6">
-                {/* For anchor links, <a> is fine */}
-                <a
-                  href="#contact"
+                <Link
+                  to="/contact"
                   className="text-gray-900 font-bold text-base hover:text-[#a51834] transition duration-300"
                 >
                   Contact Us
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>
@@ -193,22 +191,22 @@ function Header() {
                   </Link>
                 </li>
                 <li className="w-full py-3 hover:bg-gray-100 border-b border-gray-200">
-                  <a
-                    href="/courses"
+                  <Link
+                    to="/courses"
                     className="text-gray-900 font-bold text-base block w-full hover:text-[#a51834]"
                     onClick={toggleMobileMenu}
                   >
                     Our Courses
-                  </a>
+                  </Link>
                 </li>
                 <li className="w-full py-3 hover:bg-gray-100">
-                  <a
-                    href="#contact"
+                  <Link
+                    to="/contact"
                     className="text-gray-900 font-bold text-base block w-full hover:text-[#a51834]"
                     onClick={toggleMobileMenu}
                   >
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
